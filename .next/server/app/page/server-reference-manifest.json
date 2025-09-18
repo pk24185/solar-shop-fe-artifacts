@@ -1,0 +1,20 @@
+{
+  "node": {
+    "005699ebcf5dd36db75dbd76cb21ffc01b6e4c4e2b": {
+      "workers": {
+        "app/page": {
+          "moduleId": "31800",
+          "async": false,
+          "exportedName": "getProducts",
+          "filename": "src/actions/products/getProducts.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "getProducts",
+      "filename": "src/actions/products/getProducts.ts"
+    }
+  },
+  "edge": {}
+}
