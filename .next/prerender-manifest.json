@@ -1,7 +1,7 @@
 {
   "version": 4,
   "routes": {
-    "/about": {
+    "/products": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -14,8 +14,33 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/about",
-      "dataRoute": "/about.rsc",
+      "srcRoute": "/products",
+      "dataRoute": "/products.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/_not-found": {
+      "initialStatus": 404,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/_not-found",
+      "dataRoute": "/_not-found.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -73,7 +98,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/products": {
+    "/about": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -86,33 +111,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/products",
-      "dataRoute": "/products.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/_not-found": {
-      "initialStatus": 404,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/_not-found",
-      "dataRoute": "/_not-found.rsc",
+      "srcRoute": "/about",
+      "dataRoute": "/about.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,8 +126,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "88ae1ca7eb46b81d76ec49de3fa713d6",
-    "previewModeSigningKey": "db1f5aad409aa8387de9c8467e1a239bd962d3433dca2a5582361cad48c9b924",
-    "previewModeEncryptionKey": "102bc861109bb1b4b6e6df692788f9f14ce994ac0fdb26450866b690e1307dbb"
+    "previewModeId": "531df1139e9cd663b0925ed4ac932724",
+    "previewModeSigningKey": "50b4c79d48a7c5e63a9e70c9458633eb8b4c8efe78c148c173c93a4d053437dc",
+    "previewModeEncryptionKey": "f9427a4fbe42f0ce3906b135819efc879e6b54c7dcb9bbc670ce1aebfe3b4237"
   }
 }
